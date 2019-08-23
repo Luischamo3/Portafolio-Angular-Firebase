@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import{HttpClientModule} from '@angular/common/http'; //Importar manualmente HTTPclientelmodule
+
 //Rutas
 import { AppRoutingModule } from './app-routing.module';
 
@@ -27,8 +29,11 @@ import { ItemComponent } from './pages/item/item.component';
   imports: [
     BrowserModule,
     /*IMPORTANTE Es necesario importar approutingmodule*/ 
-    AppRoutingModule
+    AppRoutingModule,
+    /**Permite hacer epticiones GET , LIST ... a servidores Rest */
+    HttpClientModule
   ],
+ 
   providers: [],
   bootstrap: [AppComponent]
 })
