@@ -1,13 +1,13 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-import{HttpClientModule} from '@angular/common/http'; //Importar manualmente HTTPclientelmodule
+import { HttpClientModule } from '@angular/common/http'; //Importar manualmente HTTPclientelmodule
 
-//Rutas
+// Rutas
 import { AppRoutingModule } from './app-routing.module';
 
-//Componentes
-//Siempre verificar que las declaraciones de cada compnente creado están aquí
+// Componentes
+// Siempre verificar que las declaraciones de cada compnente creado están aquí
 import { AppComponent } from './app.component';
 import { SharedComponent } from './shared/shared.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -30,11 +30,9 @@ import { ItemComponent } from './pages/item/item.component';
     BrowserModule,
     /*IMPORTANTE Es necesario importar approutingmodule*/ 
     AppRoutingModule,
-    /**Permite hacer epticiones GET , LIST ... a servidores Rest */
+    /* Permite hacer epticiones GET , LIST ... a servidores Rest */
     HttpClientModule
-  ],
- 
-  providers: [],
+  ],   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
