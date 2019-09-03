@@ -29,7 +29,7 @@ export class ItemComponent implements OnInit {
       // tslint:disable-next-line: no-string-literal
       this.productoService.getProducto(parametros['id'])
           .subscribe( (producto: ProductoDescripcion) => {
-            console.log(producto );
+            // console.log(producto );
             this.producto = producto;
             this.id = parametros['id'];
           });

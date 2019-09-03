@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';// Importador de rutas
 import { PortafolioComponent } from './pages/portafolio/portafolio.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ItemComponent } from './pages/item/item.component';
+import { SearchComponent } from './pages/search/search.component';
 
 // Array de rutas
 // Rutas de mi aplicacion como funciona la misma
@@ -13,6 +14,7 @@ const app_routes: Routes = [
   /* Especificamos que cuando navegamos a la
   página Item debemos enviar el Id*/
   { path: 'item/:id', component: ItemComponent },
+  { path: 'search/:termino', component: SearchComponent },
   // Ruta alternativa en caso de no utilizarse el resto
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];

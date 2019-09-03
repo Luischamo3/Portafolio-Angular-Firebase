@@ -41,9 +41,14 @@
     </div>
     <p>Espere por favor</p>
   </div>
-
+  <!-- Componente Item -->
   <div *ngIf="!productoService.cargando">
-    <header class="rk-portfolio-cover  item-inside-1">
+    <!-- ngstyle es una propiedad de Angular que define un
+       stilo CSS personalizado y concatenamos el id que 
+       nos trae nuestro productoservice ne la URL -->
+       
+    <header [ngStyle]="{'background-image':'url(assets/productos/'+ id +'/main.jpg)'}"
+     class="rk-portfolio-cover  item-inside-1">
       <div class="item-inside__meta">
         <h1 class="ae-u-bolder rk-portfolio-title ">{{ producto.producto }}</h1>
         <p class="ae-theta rk-portfolio-category ">{{ producto.categoria }}</p>
