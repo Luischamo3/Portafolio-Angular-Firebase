@@ -1,6 +1,6 @@
 <div class="ae-masonry ae-masonry-md-2 ae-masonry-xl-4">
   <a
-    *ngFor="let p of productosService.productosFiltrado"
+    *ngFor="let p of productoService.productosFiltrado"
     [routerLink]="['/item', p.cod]"
     class="animated  fadeIn rk-item ae-masonry__item"
   >

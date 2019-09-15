@@ -20,7 +20,7 @@ export class ProductosService {
 
   private loadProduct() {
 //  Creamos una promesa para
-// evitar que el array de productor
+// evitar que el array de productos no se cargue vacio
 //  no ejecute las funciones
 //   siguientes hasta que no
 //   contenga valores
@@ -60,25 +60,22 @@ export class ProductosService {
       // Aplicar el filtro
       this.filterProducts( termino );
     }
-    // Regresa un nuevo Array sobre el array de productos
-    this.productosFiltrado = this.productos.filter( producto => {
-      return true;
-    } );
-    // console.log(this.productosFiltrado);
   }
 
   private filterProducts( termino: string) {
-     console.log(this.productos);
-     // Descargamos el array y lo dejamos vacío
+    // console.log(this.productos);
      this.productosFiltrado = [];
+     // Descargamos el array y lo dejamos vacío
+     termino = termino.toLocaleLowerCase();
      this.productos.forEach( prod => {
+      const tituloLower  = prod.titulo.toLocaleLowerCase();
       /* Si el elemento que
       se encuentra en el array
       contien algo de lo que
       el usuario
       introduce por el buscador */
 
-      if (prod.categoria.indexOf( termino) >= 0 || prod.titulo.indexOf( termino) >= 0 ) {
+      if (  prod.categoria.indexOf( termino ) >= 0 || tituloLower.indexOf( termino ) >= 0 ) {
         this.productosFiltrado.push( prod );
         console.log(prod);
       }
