@@ -22,16 +22,16 @@ export class ItemComponent implements OnInit {
   ngOnInit() {
     /* Leemos todos los parámetros recibidos por
     el URL*/
-    this.route.params.
-    subscribe( parametros => {
+    this.route.params
+        .subscribe( parametros => {
       // tslint:disable-next-line: no-string-literal
       // console.log(parametros['id']);
       // tslint:disable-next-line: no-string-literal
       this.productoService.getProducto(parametros['id'])
           .subscribe( (producto: ProductoDescripcion) => {
-            // console.log(producto );
-            this.producto = producto;
+            // console.log(producto );            
             this.id = parametros['id'];
+            this.producto = producto;
           });
       });
   }

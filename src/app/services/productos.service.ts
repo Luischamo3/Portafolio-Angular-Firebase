@@ -77,7 +77,7 @@ export class ProductosService {
 
       if (  prod.categoria.indexOf( termino ) >= 0 || tituloLower.indexOf( termino ) >= 0 ) {
         this.productosFiltrado.push( prod );
-        console.log(prod);
+       // console.log(prod);
       }
     });
 
